@@ -1,5 +1,3 @@
-# NOCAP github (Code repository)
-
 # README.md
 
 ## **AI-Driven Framework Modeling Perturbation Responses in Brain Organoids**
@@ -26,9 +24,9 @@ You can find all pre-trained and fine-tuned models used in our paper at the **�
 
 The resulting gene expression matrices from each model are deposited at Zenodo: (link).
 
-## [1] AI-driven framework for perturbation response prediction in brain organoids
+## [2] AI-driven framework for perturbation response prediction in brain organoids
 
-### 1-1. Pre-training a foundation model
+### 2-1. Pre-training a foundation model
 
 A total of four pre-trained models were used in this paper, all of which were based on the foundation model architecture of scGPT ([https://github.com/bowang-lab/scGPT](https://github.com/bowang-lab/scGPT)). The procedures for data preprocessing before pre-training are detailed in `Codes/Pretraining/Preprocessing`. Model pre-training can be conducted using the code `pretrain.py` located in `Codes/Pretraining`. The specific commands used to generate each of the four pre-trained models are as follows.
 
@@ -61,7 +59,7 @@ A total of four pre-trained models were used in this paper, all of which were ba
         
     - The resulting pretrained model is at `Models/Pretrained/Mouse_pretrained`
 
-### 1-2. Fine-tuning with perturbation data
+### 2-2. Fine-tuning with perturbation data
 
 For perturbation response prediction task, we fine-tuned the foundation models. Model fine-tuning can be conducted using the code `01_train.py` located in `Codes/Finetuning`. This code generates a total of ten models by varying the train/validation/test splits. An example command for running this script is provided below.
 
@@ -83,7 +81,7 @@ echo "Step 1: Training models with seeds 1 to 10"
 python3 Codes/01_train.py --adata_path $adata_path --pert_name $pert_name --pretrain_model $pretrain_model --save_dir $save_dir --preprocess
 ```
 
-### 1-3. Evaluating predictive performances
+### 2-3. Evaluating predictive performances
 
 After generating ten models, we evaluate each model using Pearson correlation, Spearman correlation, RMSE, and MAE, by comparing the predicted values with the ground truth. The evaluation is carried out on all genes, on the top 20 differentially expressed (DE) genes, on expression delta across all genes (*perturbation − control*), and on expression delta for the top 20 DE genes. In total, each model produces 16 performance values (4 metrics × 4 settings) after running the code `02_evaluation.py` at `Codes/Finetuning`. An example command for running this script is provided below.
 
@@ -92,7 +90,7 @@ echo "Step 2: Evaluating model of each seed"
 python3 Codes/02_evaluation.py --pert_name $pert_name --pretrain_model $pretrain_model --save_dir $save_dir
 ```
 
-### 1-4. Predicting perturbation responses
+### 2-4. Predicting perturbation responses
 
 After model evaluation, we select the best model (based on the Pearson correlation of delta values for DE genes). Using this model, we generate predictions for gene expression under each perturbation condition. The predictions include expression values for all genes that the model can output.
 
