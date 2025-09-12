@@ -1,10 +1,8 @@
-## **AI-Driven Framework Modeling Perturbation Responses in Brain Organoids**
+# **AI-Driven Framework Modeling Perturbation Responses in Brain Organoids**
 
 This study presents an AI-driven framework to prioritize autism spectrum disorder (ASD) risk genes. Training our model on a 3.6 million-cell atlas of genetically perturbed human brain organoids, we performed *in silico* screens to identify genes strongly associated with ASD. The paper serves as a powerful, validated AI framework to accelerate gene discovery for complex genetic disorders.
 
 We achieve this by building a foundation model using Neural Organoid Cell Atlas with Perturbation (NOCAP), fine-tuning with cell-type-specific perturbation data, predicting perturbation effects of all protein-coding genes, and evaluating the model’s predictive performance.
-
----
 
 ## [1] Data resource
 
