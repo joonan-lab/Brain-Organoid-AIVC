@@ -1,5 +1,3 @@
-# README.md
-
 ## **AI-Driven Framework Modeling Perturbation Responses in Brain Organoids**
 
 This study presents an AI-driven framework to prioritize autism spectrum disorder (ASD) risk genes. Training our model on a 3.6 million-cell atlas of genetically perturbed human brain organoids, we performed *in silico* screens to identify genes strongly associated with ASD. The paper serves as a powerful, validated AI framework to accelerate gene discovery for complex genetic disorders.
