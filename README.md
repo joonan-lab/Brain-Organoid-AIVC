@@ -24,7 +24,7 @@ The resulting gene expression matrices from each model are deposited at Zenodo: 
 
 A total of four pre-trained models were used in this paper, all of which were based on the foundation model architecture of scGPT ([https://github.com/bowang-lab/scGPT](https://github.com/bowang-lab/scGPT)). The procedures for data preprocessing before pre-training are detailed in `Codes/Pretraining/Preprocessing`. Model pre-training can be conducted using the code `pretrain.py` located in `Codes/Pretraining`. The specific commands used to generate each of the four pre-trained models are as follows.
 
-### Pre-trained model using NOCAP Core
+### 2-1. Pre-trained model using NOCAP Core
 - Bash command
     
     ```bash
@@ -32,10 +32,10 @@ A total of four pre-trained models were used in this paper, all of which were ba
     ```
     
 - The resulting pretrained model is at `Models/Pretrained/NOCAP_pretrained`
-### Pre-trained model using human brain tissue
-    - The model **“scGPT_brain”** was downloaded from the official scGPT GitHub repository ([https://github.com/bowang-lab/scGPT](https://github.com/bowang-lab/scGPT)).
-    - This model corresponds to `Models/Pretrained/BrainTissue_pretrained`.
-### Pre-trained model using an endoderm organoid atlas
+### 2-2. Pre-trained model using human brain tissue
+- The model **“scGPT_brain”** was downloaded from the official scGPT GitHub repository ([https://github.com/bowang-lab/scGPT](https://github.com/bowang-lab/scGPT)).
+- This model corresponds to `Models/Pretrained/BrainTissue_pretrained`.
+### 2-3. Pre-trained model using an endoderm organoid atlas
 - The dataset in Xu et al. (2025) ([https://www.nature.com/articles/s41588-025-02182-6](https://www.nature.com/articles/s41588-025-02182-6)) was obtained and preprocessed prior to pre-training.
 - Bash command
     
@@ -44,7 +44,7 @@ A total of four pre-trained models were used in this paper, all of which were ba
     ```
     
 - The resulting pretrained model is at `Models/Pretrained/EndodermOrganoid_pretrained`
-### Pre-trained model using the mouse brain organoid atlas
+### 2-4. Pre-trained model using the mouse brain organoid atlas
 - Bash command
     
     ```bash
