@@ -62,7 +62,7 @@ conda_env_name="scgpt"
 conda activate $conda_env_name
 
 # Set path
-pert_name="oragnoid_telencephalicneuron_pcgenes"
+pert_name="organoid_telencephalicneuron_pcgenes"
 pretrain_model="data/pretrain_core_share"
 adata_path="data/Output_telenNeuron_pcgenes_normalized.h5ad"
 save_dir="model/coreOrganoid_telencephalicneuron"
