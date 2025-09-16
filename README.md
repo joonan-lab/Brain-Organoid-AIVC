@@ -10,7 +10,13 @@ We achieve this by building a foundation model using Neural Organoid Cell Atlas 
 
 NOCAP is a fully integrated single-cell transcriptomic atlas comprising approximately 3.6 million cells derived from human brain organoids.
 
-The integrated and batch-corrected NOCAP and mouse brain organoid atlas are deposited at Zenodo: (link). 
+The integrated and batch-corrected NOCAP is deposited at Zenodo: (10.5281/zenodo.17104715). 
+
+### Mouse Brain Cell Atlas with Perturbation
+
+Mouse Brain Cell Atlas with Perturbation is a fully integrated single-cell transcriptomic atlas comprising approximately 1.9 million cells derived from mouse brain.
+
+The integrated and batch-corrected mouse brain atlas is deposited at Zenodo: (10.5281/zenodo.17112344). 
 
 ### Pre-trained and fine-tuned models
 
@@ -18,7 +24,7 @@ You can find all pre-trained and fine-tuned models used in our paper at the **â€
 
 ### Predicted gene expression matrix
 
-The resulting gene expression matrices from each model are deposited at Zenodo: (link).
+The resulting gene expression matrices from each model are deposited at Zenodo: (10.5281/zenodo.17106100).
 
 ## [2] Pre-training a foundation model
 
