@@ -56,83 +56,113 @@
     },
     {
       "path": "CODE_FILE_MANIFEST.txt",
-      "sha256": "7ace18ae5c5a5bc9dcfa5cea8883a18cf2d3fe4f20fd8404c3252529523c2ffc",
-      "size_bytes": 1970
+      "sha256": "4a03b4c5af9c35b042afdb44ea317afb30ca1b6c050c3971878873d64fe32f61",
+      "size_bytes": 2317
     },
     {
-      "path": "CellFM/01_train_CellFM.py",
+      "path": "README.md",
+      "sha256": "83c8b9c9b70443502a188a2bd23fd57e612a6d908f029193ed1b812b3f449e4b",
+      "size_bytes": 11994
+    },
+    {
+      "path": "Telen-CellFM/01_train_CellFM.py",
       "sha256": "b4e651654e6be72012d1781145bca04875b958debcbe7037532db43b425a8116",
       "size_bytes": 53165
     },
     {
-      "path": "CellFM/02_evaluation_CellFM.py",
+      "path": "Telen-CellFM/02_evaluation_CellFM.py",
       "sha256": "ac95dbfa3a189829a1e0cbf5ff3cd4e6475d15bc772f666ed7cfe365c90ff4d1",
       "size_bytes": 16868
     },
     {
-      "path": "CellFM/03_prediction_CellFM.py",
+      "path": "Telen-CellFM/03_prediction_CellFM.py",
       "sha256": "12c8f948b195d39c7a39d5977f12bf25071fbce2cf29ffc202ff38982e16de05",
       "size_bytes": 26544
     },
     {
-      "path": "CellFM/cellfm_gears_model.py",
+      "path": "Telen-CellFM/cellfm_gears_model.py",
       "sha256": "a4ebd775664a0e77734dc3e2ffcffad89e1de275c5a1c529d008e91fb5f291dd",
       "size_bytes": 14054
     },
     {
-      "path": "GEARS/00_preprocess_GEARS.py",
+      "path": "Telen-GEARS/00_preprocess_GEARS.py",
       "sha256": "3601a363fbc5ce0195628e8e144a43fbb6a750ceb2aa7fbcefff40877adcbb43",
       "size_bytes": 4477
     },
     {
-      "path": "GEARS/01_train_GEARS.py",
+      "path": "Telen-GEARS/01_train_GEARS.py",
       "sha256": "c2196f761ee4daf37d159262f3b163a8840c6f55844b56d5cc4ee80ad7afa2e9",
       "size_bytes": 3072
     },
     {
-      "path": "GEARS/02_evaluation_GEARS.py",
+      "path": "Telen-GEARS/02_evaluation_GEARS.py",
       "sha256": "5a7ba3c5344a4ec90a9f4b14974f80b665c97e20fd6c015f1914f5774ad1a7ec",
       "size_bytes": 5654
     },
     {
-      "path": "GEARS/03_prediction_GEARS.py",
+      "path": "Telen-GEARS/03_prediction_GEARS.py",
       "sha256": "fd75bdf7a22271fc0affaeb648765ce58fe6352bad167778455c35886718194f",
       "size_bytes": 2891
     },
     {
-      "path": "GeneCompass/01_train_GeneCompass.py",
+      "path": "Telen-GeneCompass/01_train_GeneCompass.py",
       "sha256": "d6cc4b854cefd1a301c30676db3b41fb80d926868caf2fe396bdcb4baaa47124",
       "size_bytes": 34906
     },
     {
-      "path": "GeneCompass/02_evaluation_GeneCompass.py",
+      "path": "Telen-GeneCompass/02_evaluation_GeneCompass.py",
       "sha256": "9b1256a3008e0169cec55a9abc685bfff205d5767c2881718dbc1178666a2d21",
       "size_bytes": 19794
     },
     {
-      "path": "GeneCompass/03_prediction_GeneCompass.py",
+      "path": "Telen-GeneCompass/03_prediction_GeneCompass.py",
       "sha256": "d2e287a23f8671884e7b073528c36c376099659af28a70b87466f672533ee457",
       "size_bytes": 21737
     },
     {
-      "path": "Geneformer/01_train_Geneformer.py",
+      "path": "Telen-Geneformer/01_train_Geneformer.py",
       "sha256": "f0a84cdfaa0803a588ab849b69603a12949232f7771a547145a9c0624c90e300",
       "size_bytes": 45248
     },
     {
-      "path": "Geneformer/02_evaluation_Geneformer.py",
+      "path": "Telen-Geneformer/02_evaluation_Geneformer.py",
       "sha256": "ecc4c119962bb945303a03b9f8d4be64768df72dd3e4c5bad6c57445677b8c5a",
       "size_bytes": 30452
     },
     {
-      "path": "Geneformer/03_prediction_Geneformer.py",
+      "path": "Telen-Geneformer/03_prediction_Geneformer.py",
       "sha256": "c62a3ba8989f97633a3f439773020d1e7ff31cb4d5df5e56f35ecbbb1e2b556b",
       "size_bytes": 16480
     },
     {
-      "path": "README.md",
-      "sha256": "d565f98d79fbe71602d5a8270e932b7d4c92b31fd04d9bb3c31fada90cd69c82",
-      "size_bytes": 11426
+      "path": "Telen-scFoundation/01_train_scFoundation.py",
+      "sha256": "2029f909bb6ca4d1ac78d4c36b5b34ecb4c0185c9ba0e3d28f1517b78ea72030",
+      "size_bytes": 24033
+    },
+    {
+      "path": "Telen-scFoundation/02_evaluation_scFoundation.py",
+      "sha256": "677c81b9d3689d8f0452dab36c93695a6f980d066ce3ab07ebab1a5f0b6e5328",
+      "size_bytes": 31480
+    },
+    {
+      "path": "Telen-scFoundation/03_prediction_scFoundation.py",
+      "sha256": "f2966b1fdd345638d4323f58009bedf2df05083e2fecef1a4ee72bfe7128e6c7",
+      "size_bytes": 20056
+    },
+    {
+      "path": "Telen-scLAMBDA/01_train_scLAMBDA.py",
+      "sha256": "464655c5b6f05fec373223b21be588bddbadc88f322520f1b479eefefdfabab8",
+      "size_bytes": 16871
+    },
+    {
+      "path": "Telen-scLAMBDA/02_evaluation_scLAMBDA.py",
+      "sha256": "a6d39ddf83eafb06f073cf738616aaba34a0dce160cbd44b0de70b377acecf1c",
+      "size_bytes": 14801
+    },
+    {
+      "path": "Telen-scLAMBDA/03_prediction_scLAMBDA.py",
+      "sha256": "207d16f4fbf34cd6d377a5df43fe64dc73c3ef2e0c6a743b0f4b3bf8e96a1770",
+      "size_bytes": 14297
     },
     {
       "path": "environment.yml",
@@ -150,64 +180,34 @@
       "size_bytes": 545
     },
     {
-      "path": "scFoundation/01_train_scFoundation.py",
-      "sha256": "2029f909bb6ca4d1ac78d4c36b5b34ecb4c0185c9ba0e3d28f1517b78ea72030",
-      "size_bytes": 24033
-    },
-    {
-      "path": "scFoundation/02_evaluation_scFoundation.py",
-      "sha256": "677c81b9d3689d8f0452dab36c93695a6f980d066ce3ab07ebab1a5f0b6e5328",
-      "size_bytes": 31480
-    },
-    {
-      "path": "scFoundation/03_prediction_scFoundation.py",
-      "sha256": "f2966b1fdd345638d4323f58009bedf2df05083e2fecef1a4ee72bfe7128e6c7",
-      "size_bytes": 20056
-    },
-    {
-      "path": "scGPT_based/Finetuning.zip",
+      "path": "scGPT_backbone/Finetuning.zip",
       "sha256": "54eddf992eb9daabfeeb069bffa9002c0e25830a1341f3ed7bbcfd7445893a1c",
       "size_bytes": 15736
     },
     {
-      "path": "scGPT_based/Finetuning/01_train.py",
+      "path": "scGPT_backbone/Finetuning/01_train.py",
       "sha256": "712c4c57e4fd207f99931041550fff3845306dea58c0cfed9a4d8761e6e2dace",
       "size_bytes": 15192
     },
     {
-      "path": "scGPT_based/Finetuning/02_evaluation.py",
+      "path": "scGPT_backbone/Finetuning/02_evaluation.py",
       "sha256": "da46b90484a230ed10a490ae196b41e2561bdaf7f379f3de695d99d554e52d9c",
       "size_bytes": 21925
     },
     {
-      "path": "scGPT_based/Finetuning/03_prediction.py",
+      "path": "scGPT_backbone/Finetuning/03_prediction.py",
       "sha256": "d3f858cedc9df6bfc1131d46bd323aa60f56535e89533a8a7226b393e3c8fb78",
       "size_bytes": 11234
     },
     {
-      "path": "scGPT_based/Pretraining.zip",
+      "path": "scGPT_backbone/Pretraining.zip",
       "sha256": "a31103d08ddf0701da5fefff95122fccac23d6166bbed85d29a82ec8e8b7b8fb",
       "size_bytes": 9712
     },
     {
-      "path": "scGPT_based/Pretraining/pretrain.py",
+      "path": "scGPT_backbone/Pretraining/pretrain.py",
       "sha256": "65623b5564f4754120c80ba587df1d80e418869771a0b29de6c952d066ddae90",
       "size_bytes": 34973
-    },
-    {
-      "path": "scLAMBDA/01_train_scLAMBDA.py",
-      "sha256": "464655c5b6f05fec373223b21be588bddbadc88f322520f1b479eefefdfabab8",
-      "size_bytes": 16871
-    },
-    {
-      "path": "scLAMBDA/02_evaluation_scLAMBDA.py",
-      "sha256": "a6d39ddf83eafb06f073cf738616aaba34a0dce160cbd44b0de70b377acecf1c",
-      "size_bytes": 14801
-    },
-    {
-      "path": "scLAMBDA/03_prediction_scLAMBDA.py",
-      "sha256": "207d16f4fbf34cd6d377a5df43fe64dc73c3ef2e0c6a743b0f4b3bf8e96a1770",
-      "size_bytes": 14297
     }
   ]
 }

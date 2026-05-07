@@ -1,0 +1,13 @@
+{
+  "data_path": "/opt/dlami/nvme/model3/data/NOCAP_CoreAtlas_Final.h5ad",
+  "ckpt_path": "/opt/dlami/nvme/model3/CellFM-torch/models/CellFM_80M/CellFM_80M_weight.ckpt",
+  "epochs": 5,
+  "batch_size": 4,
+  "lr": 1e-05,
+  "mask_ratio": 0.2,
+  "max_seq_len": 2048,
+  "n_cells": 1418675,
+  "n_genes": 27245,
+  "best_epoch": 1,
+  "best_loss": 15.582037620818918
+}

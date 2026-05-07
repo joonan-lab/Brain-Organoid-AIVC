@@ -3,6 +3,8 @@ NOCAP-AIVC benchmarking code file manifest
 Root: Codes
 Scope: Dropbox-staged scripts-only GitHub code package for benchmarking workflows.
 
+Folder naming note: model-specific workflow folders use reviewer-facing Telen-* names except BaselineMean, Benchmarking_Metrics, and the shared scGPT_backbone workflow.
+
 Top-level/
   - CODE_FILE_MANIFEST.json
   - CODE_FILE_MANIFEST.txt
@@ -25,42 +27,42 @@ Benchmarking_Metrics/
   - Benchmarking_Metrics/07_identify_perturbation_gene_clusters.py
   - Benchmarking_Metrics/08_aggregate_benchmarking_metrics.R
 
-CellFM/
-  - CellFM/01_train_CellFM.py
-  - CellFM/02_evaluation_CellFM.py
-  - CellFM/03_prediction_CellFM.py
-  - CellFM/cellfm_gears_model.py
+Telen-CellFM/
+  - Telen-CellFM/01_train_CellFM.py
+  - Telen-CellFM/02_evaluation_CellFM.py
+  - Telen-CellFM/03_prediction_CellFM.py
+  - Telen-CellFM/cellfm_gears_model.py
 
-GEARS/
-  - GEARS/00_preprocess_GEARS.py
-  - GEARS/01_train_GEARS.py
-  - GEARS/02_evaluation_GEARS.py
-  - GEARS/03_prediction_GEARS.py
+Telen-GEARS/
+  - Telen-GEARS/00_preprocess_GEARS.py
+  - Telen-GEARS/01_train_GEARS.py
+  - Telen-GEARS/02_evaluation_GEARS.py
+  - Telen-GEARS/03_prediction_GEARS.py
 
-GeneCompass/
-  - GeneCompass/01_train_GeneCompass.py
-  - GeneCompass/02_evaluation_GeneCompass.py
-  - GeneCompass/03_prediction_GeneCompass.py
+Telen-GeneCompass/
+  - Telen-GeneCompass/01_train_GeneCompass.py
+  - Telen-GeneCompass/02_evaluation_GeneCompass.py
+  - Telen-GeneCompass/03_prediction_GeneCompass.py
 
-Geneformer/
-  - Geneformer/01_train_Geneformer.py
-  - Geneformer/02_evaluation_Geneformer.py
-  - Geneformer/03_prediction_Geneformer.py
+Telen-Geneformer/
+  - Telen-Geneformer/01_train_Geneformer.py
+  - Telen-Geneformer/02_evaluation_Geneformer.py
+  - Telen-Geneformer/03_prediction_Geneformer.py
 
-scFoundation/
-  - scFoundation/01_train_scFoundation.py
-  - scFoundation/02_evaluation_scFoundation.py
-  - scFoundation/03_prediction_scFoundation.py
+Telen-scFoundation/
+  - Telen-scFoundation/01_train_scFoundation.py
+  - Telen-scFoundation/02_evaluation_scFoundation.py
+  - Telen-scFoundation/03_prediction_scFoundation.py
 
-scGPT_based/
-  - scGPT_based/Finetuning.zip
-  - scGPT_based/Finetuning/01_train.py
-  - scGPT_based/Finetuning/02_evaluation.py
-  - scGPT_based/Finetuning/03_prediction.py
-  - scGPT_based/Pretraining.zip
-  - scGPT_based/Pretraining/pretrain.py
+Telen-scLAMBDA/
+  - Telen-scLAMBDA/01_train_scLAMBDA.py
+  - Telen-scLAMBDA/02_evaluation_scLAMBDA.py
+  - Telen-scLAMBDA/03_prediction_scLAMBDA.py
 
-scLAMBDA/
-  - scLAMBDA/01_train_scLAMBDA.py
-  - scLAMBDA/02_evaluation_scLAMBDA.py
-  - scLAMBDA/03_prediction_scLAMBDA.py
+scGPT_backbone/
+  - scGPT_backbone/Finetuning.zip
+  - scGPT_backbone/Finetuning/01_train.py
+  - scGPT_backbone/Finetuning/02_evaluation.py
+  - scGPT_backbone/Finetuning/03_prediction.py
+  - scGPT_backbone/Pretraining.zip
+  - scGPT_backbone/Pretraining/pretrain.py

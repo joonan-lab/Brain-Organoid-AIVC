@@ -29,29 +29,11 @@ Users should download permitted datasets and generated matrices from the relevan
 
 ## Model resources
 
-Pre-trained and fine-tuned model checkpoint entries are organized under `Models/`:
+Model checkpoint entries are organized under `Models/`. See `Models/README.md` for the current model inventory, selected seeds, checkpoint filenames, and Git LFS guidance.
 
-```text
-Models/
-├── Pretrained/
-│   ├── BrainTissue_pretrained/
-│   ├── EndodermOrganoid_pretrained/
-│   ├── Mouse_pretrained/
-│   └── NOCAP_pretrained/
-└── Finetuned/
-    ├── CellLine-BrainTissue.pt
-    ├── CellLine-NOCAP.pt
-    ├── Neuro-NOCAP.pt
-    ├── Pan-NOCAP.pt
-    ├── Telen-BrainTissue.pt
-    ├── Telen-EndodermOrganoid.pt
-    ├── Telen-GEARS/
-    ├── Telen-Mouse.pt
-    ├── Telen-NOCAP-Lite.pt
-    └── Telen-NOCAP.pt
-```
+At a high level, `Models/Pretrained/` contains scGPT-style pretrained resources, and `Models/Finetuned/` contains fine-tuned perturbation-response model checkpoints and checkpoint metadata. The Dropbox-staged package includes the original scGPT-backbone fine-tuned model entries, added BrainCell fine-tuned checkpoint entries, the Telen-WholeHuman seed 8 checkpoint, and added benchmarking resources for Telen-scLAMBDA, Telen-GeneCompass seed 10, Telen-Geneformer seed 2, and the adapted Telen-CellFM checkpoint.
 
-Checkpoint files are tracked through Git LFS where applicable. If a cloned repository contains pointer files instead of full model files, install Git LFS and run:
+Checkpoint-like files are intended to be tracked through Git LFS where applicable. If a cloned repository contains pointer files instead of full model files, install Git LFS and run:
 
 ```bash
 git lfs install
@@ -62,9 +44,9 @@ git lfs pull
 
 The `Codes/` directory is a scripts-only benchmarking package. It includes:
 
-- scGPT-backbone NOCAP model pretraining, fine-tuning, evaluation and prediction scripts under `Codes/scGPT_based/`
-- External baseline workflows for scLAMBDA, scFoundation, Geneformer, GeneCompass, CellFM and GEARS
-- A non-parametric TrainMean baseline
+- scGPT-backbone NOCAP model pretraining, fine-tuning, evaluation and prediction scripts under `Codes/scGPT_backbone/`
+- External baseline workflows under reviewer-facing model folders: `Codes/Telen-scLAMBDA/`, `Codes/Telen-scFoundation/`, `Codes/Telen-Geneformer/`, `Codes/Telen-GeneCompass/`, `Codes/Telen-CellFM/` and `Codes/Telen-GEARS/`
+- A non-parametric TrainMean baseline under `Codes/BaselineMean/`
 - Downstream metric computation and integrated rank aggregation under `Codes/Benchmarking_Metrics/`
 - Environment and path templates: `Codes/environment.yml`, `Codes/requirements.txt`, and `Codes/paths.example.yaml`
 - File manifests: `Codes/CODE_FILE_MANIFEST.txt` and `Codes/CODE_FILE_MANIFEST.json`

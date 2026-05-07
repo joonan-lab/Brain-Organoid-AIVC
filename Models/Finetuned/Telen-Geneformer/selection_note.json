@@ -1,0 +1,9 @@
+{
+  "model": "Telen-Geneformer",
+  "included_seed": 2,
+  "included_checkpoint": "seed_2/Seed_2_best_model.pt",
+  "primary_metric_context": "Seed 2 has the highest pearson_de_delta in Seed1to10_metrics.csv among the available Geneformer seed runs.",
+  "pearson_de_delta_seed_2": 0.8448980717558605,
+  "spearmanr_de_delta_seed_2": 0.8399570354457572,
+  "source_root": "/data1/Geneformer/geneformer_test/results_v2/models"
+}

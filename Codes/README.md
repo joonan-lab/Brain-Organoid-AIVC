@@ -8,9 +8,9 @@ The package is scripts-only. Large single-cell matrices, trained checkpoints, th
 
 The benchmarking workflow evaluates perturbation-response prediction in neural organoid contexts. It includes:
 
-- scGPT-backbone NOCAP workflows under `scGPT_based/`
-- External architecture baselines: scLAMBDA, scFoundation, Geneformer, GeneCompass, CellFM and GEARS
-- A non-parametric TrainMean baseline
+- scGPT-backbone NOCAP workflows under `scGPT_backbone/`
+- External architecture baselines: Telen-scLAMBDA, Telen-scFoundation, Telen-Geneformer, Telen-GeneCompass, Telen-CellFM and Telen-GEARS
+- A non-parametric TrainMean baseline under `BaselineMean/`
 - Downstream post-analysis for prediction accuracy, embedding quality, differential-expression recovery, Moran's I and integrated rank aggregation
 
 ## Directory layout
@@ -25,19 +25,21 @@ Codes/
 ├── CODE_FILE_MANIFEST.json
 ├── BaselineMean/             # TrainMean non-parametric baseline
 ├── Benchmarking_Metrics/     # metric computation and final rank aggregation
-├── CellFM/                   # CellFM encoder with GEARS-style perturbation decoder
-├── GEARS/                    # GEARS workflow
-├── GeneCompass/              # GeneCompass workflow
-├── Geneformer/               # Geneformer workflow
-├── scFoundation/             # scFoundation workflow
-├── scGPT_based/              # scGPT pretraining/fine-tuning/evaluation/prediction scripts
-└── scLAMBDA/                 # scLAMBDA workflow
+├── Telen-CellFM/             # CellFM encoder with GEARS-style perturbation decoder
+├── Telen-GEARS/              # GEARS workflow
+├── Telen-GeneCompass/        # GeneCompass workflow
+├── Telen-Geneformer/         # Geneformer workflow
+├── Telen-scFoundation/       # scFoundation workflow
+├── scGPT_backbone/     # scGPT pretraining/fine-tuning/evaluation/prediction scripts
+└── Telen-scLAMBDA/           # scLAMBDA workflow
 ```
 
-The `scGPT_based/` directory contains both unpacked scripts and the corresponding small zip archives:
+Model-specific workflow directories use reviewer-facing `Telen-` prefixes except for `BaselineMean/`, `Benchmarking_Metrics/`, and the shared `scGPT_backbone/` workflow. Script filenames are intentionally kept architecture-specific to avoid unnecessary execution changes.
+
+The `scGPT_backbone/` directory contains both unpacked scripts and the corresponding small zip archives:
 
 ```text
-scGPT_based/
+scGPT_backbone/
 ├── Finetuning/
 │   ├── 01_train.py
 │   ├── 02_evaluation.py
@@ -61,7 +63,7 @@ or:
 pip install -r requirements.txt
 ```
 
-The Python requirements are pinned to versions used during code-package preparation where available. `torch==2.6.0` is listed without a CUDA build suffix; install the CUDA-compatible wheel for your system if GPU execution is required. `torchtext` is required by the scGPT-based scripts, and `openpyxl` is required for Excel input/output through pandas.
+The Python requirements are pinned to versions used during code-package preparation where available. `torch==2.6.0` is listed without a CUDA build suffix; install the CUDA-compatible wheel for your system if GPU execution is required. `torchtext` is required by the scGPT-backbone scripts, and `openpyxl` is required for Excel input/output through pandas.
 
 The R post-analysis scripts additionally require packages such as `Seurat`, `MuDataSeurat`, `scDEED`, `reticulate`, `dplyr`, `tidyr`, `ggplot2`, `readxl`, `writexl`, `foreach`, `doParallel`, `patchwork`, `RColorBrewer` and `extrafont`. Code-package-QA observed versions included R 4.4.3, Seurat 5.3.0, MuDataSeurat 0.0.0.9000, reticulate 1.43.0, dplyr 1.1.4, tidyr 1.3.1, ggplot2 4.0.0, readxl 1.4.5, writexl 1.5.4, foreach 1.5.2, doParallel 1.0.17, patchwork 1.3.2, RColorBrewer 1.1.3 and extrafont 0.20. `MuDataSeurat`, `scDEED`, `VGAM`, `resample` and `distances` may need installation from upstream R sources if unavailable from conda-forge.
 
@@ -109,62 +111,62 @@ Most scripts use placeholders or local path constants from the original analysis
 
 This is a high-level execution outline. Exact command-line arguments depend on local paths, external checkpoints and upstream package availability.
 
-### scGPT-backbone models
+### Telen-scGPT-backbone models
 
 ```bash
-python scGPT_based/Pretraining/pretrain.py
-python scGPT_based/Finetuning/01_train.py
-python scGPT_based/Finetuning/02_evaluation.py
-python scGPT_based/Finetuning/03_prediction.py  # uses 1,000 sampled control cells per perturbation
+python scGPT_backbone/Pretraining/pretrain.py
+python scGPT_backbone/Finetuning/01_train.py
+python scGPT_backbone/Finetuning/02_evaluation.py
+python scGPT_backbone/Finetuning/03_prediction.py  # uses 1,000 sampled control cells per perturbation
 ```
 
-### scLAMBDA
+### Telen-scLAMBDA
 
 ```bash
-python scLAMBDA/01_train_scLAMBDA.py
-python scLAMBDA/02_evaluation_scLAMBDA.py
-python scLAMBDA/03_prediction_scLAMBDA.py
+python Telen-scLAMBDA/01_train_scLAMBDA.py
+python Telen-scLAMBDA/02_evaluation_scLAMBDA.py
+python Telen-scLAMBDA/03_prediction_scLAMBDA.py
 ```
 
-### scFoundation
+### Telen-scFoundation
 
 ```bash
-python scFoundation/01_train_scFoundation.py
-python scFoundation/02_evaluation_scFoundation.py
-python scFoundation/03_prediction_scFoundation.py
+python Telen-scFoundation/01_train_scFoundation.py
+python Telen-scFoundation/02_evaluation_scFoundation.py
+python Telen-scFoundation/03_prediction_scFoundation.py
 ```
 
-### Geneformer
+### Telen-Geneformer
 
 ```bash
-python Geneformer/01_train_Geneformer.py
-python Geneformer/02_evaluation_Geneformer.py
-python Geneformer/03_prediction_Geneformer.py
+python Telen-Geneformer/01_train_Geneformer.py
+python Telen-Geneformer/02_evaluation_Geneformer.py
+python Telen-Geneformer/03_prediction_Geneformer.py
 ```
 
-### GeneCompass
+### Telen-GeneCompass
 
 ```bash
-python GeneCompass/01_train_GeneCompass.py
-python GeneCompass/02_evaluation_GeneCompass.py
-python GeneCompass/03_prediction_GeneCompass.py
+python Telen-GeneCompass/01_train_GeneCompass.py
+python Telen-GeneCompass/02_evaluation_GeneCompass.py
+python Telen-GeneCompass/03_prediction_GeneCompass.py
 ```
 
-### CellFM
+### Telen-CellFM
 
 ```bash
-python CellFM/01_train_CellFM.py
-python CellFM/02_evaluation_CellFM.py
-python CellFM/03_prediction_CellFM.py
+python Telen-CellFM/01_train_CellFM.py
+python Telen-CellFM/02_evaluation_CellFM.py
+python Telen-CellFM/03_prediction_CellFM.py
 ```
 
-### GEARS baseline
+### Telen-GEARS baseline
 
 ```bash
-python GEARS/00_preprocess_GEARS.py
-python GEARS/01_train_GEARS.py
-python GEARS/02_evaluation_GEARS.py
-python GEARS/03_prediction_GEARS.py
+python Telen-GEARS/00_preprocess_GEARS.py
+python Telen-GEARS/01_train_GEARS.py
+python Telen-GEARS/02_evaluation_GEARS.py
+python Telen-GEARS/03_prediction_GEARS.py
 ```
 
 ### TrainMean baseline
@@ -237,17 +239,17 @@ For methods trained across seeds, the best-seed prediction matrix is selected by
 
 ## Model-specific notes
 
-### scGPT-based workflow note
+### Telen-scGPT-backbone workflow note
 
-`scGPT_based/Finetuning/03_prediction.py` samples up to 1,000 control cells per perturbation as the prediction background, matching the manuscript-facing description. The `Finetuning.zip` and `Pretraining.zip` archives duplicate the unpacked scGPT-based scripts for compatibility with the staged Dropbox package.
+`scGPT_backbone/Finetuning/03_prediction.py` samples up to 1,000 control cells per perturbation as the prediction background, matching the manuscript-facing description. The `Finetuning.zip` and `Pretraining.zip` archives duplicate the unpacked scGPT-backbone scripts for compatibility with the staged Dropbox package.
 
-### scLAMBDA workflow note
+### Telen-scLAMBDA workflow note
 
-`scLAMBDA/01_train_scLAMBDA.py` includes data preparation before model training, and `scLAMBDA/03_prediction_scLAMBDA.py` writes the benchmarking-standardized prediction output directly.
+`Telen-scLAMBDA/01_train_scLAMBDA.py` includes data preparation before model training, and `Telen-scLAMBDA/03_prediction_scLAMBDA.py` writes the benchmarking-standardized prediction output directly.
 
-### GeneCompass and CellFM workflow notes
+### Telen-GeneCompass and Telen-CellFM workflow notes
 
-`GeneCompass/01_train_GeneCompass.py` integrates preprocessing, coexpression precomputation and multi-seed training. In this code package, `CellFM` denotes the CellFM encoder coupled to a GEARS-style perturbation decoder; `CellFM/01_train_CellFM.py` integrates checkpoint adaptation, control-cell embedding extraction, GO graph preparation and downstream perturbation-decoder training. Their prediction scripts write benchmarking-ready outputs after prediction generation.
+`Telen-GeneCompass/01_train_GeneCompass.py` integrates preprocessing, coexpression precomputation and multi-seed training. In this code package, `Telen-CellFM` denotes the CellFM encoder coupled to a GEARS-style perturbation decoder; `Telen-CellFM/01_train_CellFM.py` integrates checkpoint adaptation, control-cell embedding extraction, GO graph preparation and downstream perturbation-decoder training. Their prediction scripts write benchmarking-ready outputs after prediction generation.
 
 ## File manifest
 
