@@ -1,0 +1,26 @@
+# Copy this file to paths.yaml and edit paths for your environment.
+# Scripts in this code package use placeholders rather than private local paths.
+
+project_root: /path/to/nocap-aivc-benchmark
+
+data_root: /path/to/data
+shared_root: /path/to/shared/resources
+env_root: /path/to/external/model/repos
+
+inputs:
+  nocap_telen_h5ad: /path/to/NOCAP_Telen_512k_normalized.h5ad
+  nocap_extended_h5ad: /path/to/NOCAP_ExtendedAtlas_Final.h5ad
+  gene_annotation_table: /path/to/gene_annotation_table.tsv
+  asd_gene_sets: /path/to/ASD_risk_genes.xlsx
+
+outputs:
+  results_dir: /path/to/results
+  figures_dir: /path/to/figures
+  tables_dir: /path/to/tables
+
+external_models:
+  scgpt_checkpoint: /path/to/scgpt/checkpoint
+  scfoundation_checkpoint: /path/to/scfoundation/checkpoint
+  geneformer_checkpoint: /path/to/geneformer/checkpoint
+  genecompass_checkpoint: /path/to/genecompass/checkpoint
+  cellfm_checkpoint: /path/to/cellfm/checkpoint

@@ -1,0 +1,24 @@
+anndata==0.11.4
+scanpy==1.11.5
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.5.2
+statsmodels==0.14.6
+matplotlib==3.10.8
+tqdm==4.67.1
+torch==2.6.0
+torch-geometric==2.6.1
+torchtext==0.18.0
+transformers==4.56.1
+datasets==2.21.0
+libpysal==4.13.0
+esda==2.7.0
+pybiomart==0.2.0
+psutil==7.0.0
+PyYAML==6.0.2
+openpyxl==3.1.5
+
+# External model packages used by specific workflows and typically installed
+# from their upstream repositories or local checkouts rather than PyPI:
+# gears, scgpt, geneformer, sclambda, scFoundation modules, geares.

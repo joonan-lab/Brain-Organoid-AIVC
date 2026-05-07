@@ -1,6 +1,44 @@
+# OS/editor
 .DS_Store
 **/.DS_Store
+.vscode/
+.idea/
 
-.DS_Store
-**/.DS_Store
+# R/Python caches and sessions
+.Rhistory
+.RData
+.Rapp.history
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
 
+# Local environments and credentials
+.env
+.envrc
+.venv/
+venv/
+paths.yaml
+Codes/paths.yaml
+
+# Local data, checkpoints and generated outputs
+Data/
+data/
+outputs/
+output/
+results/
+figures/
+tables/
+logs/
+checkpoints/
+*.h5ad
+*.h5
+*.hdf5
+*.loom
+*.mtx
+*.npz
+*.npy
+*.csv.gz
+*.tsv.gz
+
+# Keep model checkpoint tracking controlled by .gitattributes/Git LFS.
+# Do not add new large binary outputs unless intentionally staged.

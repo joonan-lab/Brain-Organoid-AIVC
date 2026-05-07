@@ -1,0 +1,66 @@
+NOCAP-AIVC benchmarking code file manifest
+
+Root: Codes
+Scope: Dropbox-staged scripts-only GitHub code package for benchmarking workflows.
+
+Top-level/
+  - CODE_FILE_MANIFEST.json
+  - CODE_FILE_MANIFEST.txt
+  - README.md
+  - environment.yml
+  - paths.example.yaml
+  - requirements.txt
+
+BaselineMean/
+  - BaselineMean/01_evaluation_TrainMean.py
+
+Benchmarking_Metrics/
+  - Benchmarking_Metrics/00_convert_predictions_to_anndata.py
+  - Benchmarking_Metrics/01_scdeed_grid_search.R
+  - Benchmarking_Metrics/02_apply_optimal_umap.py
+  - Benchmarking_Metrics/03_compute_pca_moran_i.py
+  - Benchmarking_Metrics/04_gather_model_performance_metrics.py
+  - Benchmarking_Metrics/05_compute_de_recovery_metrics.py
+  - Benchmarking_Metrics/06_compute_embedding_quality_metrics.py
+  - Benchmarking_Metrics/07_identify_perturbation_gene_clusters.py
+  - Benchmarking_Metrics/08_aggregate_benchmarking_metrics.R
+
+CellFM/
+  - CellFM/01_train_CellFM.py
+  - CellFM/02_evaluation_CellFM.py
+  - CellFM/03_prediction_CellFM.py
+  - CellFM/cellfm_gears_model.py
+
+GEARS/
+  - GEARS/00_preprocess_GEARS.py
+  - GEARS/01_train_GEARS.py
+  - GEARS/02_evaluation_GEARS.py
+  - GEARS/03_prediction_GEARS.py
+
+GeneCompass/
+  - GeneCompass/01_train_GeneCompass.py
+  - GeneCompass/02_evaluation_GeneCompass.py
+  - GeneCompass/03_prediction_GeneCompass.py
+
+Geneformer/
+  - Geneformer/01_train_Geneformer.py
+  - Geneformer/02_evaluation_Geneformer.py
+  - Geneformer/03_prediction_Geneformer.py
+
+scFoundation/
+  - scFoundation/01_train_scFoundation.py
+  - scFoundation/02_evaluation_scFoundation.py
+  - scFoundation/03_prediction_scFoundation.py
+
+scGPT_based/
+  - scGPT_based/Finetuning.zip
+  - scGPT_based/Finetuning/01_train.py
+  - scGPT_based/Finetuning/02_evaluation.py
+  - scGPT_based/Finetuning/03_prediction.py
+  - scGPT_based/Pretraining.zip
+  - scGPT_based/Pretraining/pretrain.py
+
+scLAMBDA/
+  - scLAMBDA/01_train_scLAMBDA.py
+  - scLAMBDA/02_evaluation_scLAMBDA.py
+  - scLAMBDA/03_prediction_scLAMBDA.py
