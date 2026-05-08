@@ -31,7 +31,7 @@ Users should download permitted datasets and generated matrices from the relevan
 
 Model checkpoint entries are organized under `Models/`. See `Models/README.md` for the current model inventory, selected seeds, checkpoint filenames, and Git LFS guidance.
 
-At a high level, `Models/Pretrained/` contains scGPT-style pretrained resources, and `Models/Finetuned/` contains fine-tuned perturbation-response model checkpoints and checkpoint metadata. The Dropbox-staged package includes the original scGPT-backbone fine-tuned model entries, added BrainCell fine-tuned checkpoint entries, the Telen-WholeHuman seed 8 checkpoint, and added benchmarking resources for Telen-scLAMBDA, Telen-GeneCompass seed 10, Telen-Geneformer seed 2, and the adapted Telen-CellFM checkpoint.
+At a high level, `Models/Pretrained/` contains scGPT-style pretrained resources, and `Models/Finetuned/` contains fine-tuned perturbation-response model checkpoints and checkpoint metadata. The Dropbox-staged package includes the original scGPT-backbone fine-tuned model entries, added BrainCell fine-tuned checkpoint entries, the Telen-WholeHuman seed 8 checkpoint, and added benchmarking resources for Telen-scLAMBDA, Telen-GeneCompass seed 10, Telen-Geneformer seed 2, and the adapted Telen-CellFM checkpoint. The full final Telen-CellFM checkpoint is archived separately as two Zenodo records (`Telen-CellFM.pt.part01` and `Telen-CellFM.pt.part02`); see `Models/README.md` for DOIs and reconstruction instructions.
 
 Checkpoint-like files are intended to be tracked through Git LFS where applicable. If a cloned repository contains pointer files instead of full model files, install Git LFS and run:
 

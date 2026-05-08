@@ -125,7 +125,22 @@ Models/Finetuned/Telen-CellFM/
     └── training_config.json
 ```
 
-The adapted CellFM checkpoint is included for model-resource provenance. The final CellFM perturbation-decoder checkpoint from the local run is approximately 67 GB and is not included here; it should be archived externally if full binary redistribution is required.
+The adapted CellFM checkpoint is included here for model-resource provenance. The full final Telen-CellFM perturbation-decoder checkpoint is too large for GitHub/LFS distribution and is archived separately as a two-part Zenodo deposit because it exceeds Zenodo's 50 GB per-record bucket quota.
+
+Download both parts and reconstruct the original checkpoint with:
+
+```
+cat Telen-CellFM.pt.part01 Telen-CellFM.pt.part02 > Telen-CellFM.pt
+sha256sum Telen-CellFM.pt
+```
+
+Zenodo records:
+
+- Part 1: `Telen-CellFM.pt.part01` (DOI: `10.5281/zenodo.20078742`; SHA256: `1866138adcd9e2398c463d18eb8315b5a6b908e3c31f5ece7c43bb27884bd085`)
+- Part 2: `Telen-CellFM.pt.part02` (DOI: `10.5281/zenodo.20079060`; SHA256: `3ec7e86d40477943e58c6a688dacbf987339cf56614c9baaf6afe9ab4863922e`)
+- Reconstructed `Telen-CellFM.pt` SHA256: `f30f4d0df6554492d94be4e9f94455c8b3abc2d3e7169bc02f80b4f0d1ef5c57`
+
+This file corresponds to the selected seed 3 local checkpoint from `results_v2/seed_3/best_model.pt`.
 
 ## Git LFS
 
