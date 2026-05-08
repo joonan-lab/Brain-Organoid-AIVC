@@ -15,7 +15,7 @@ This repository contains code and model resources for the NOCAP-AIVC perturbatio
 
 ```
 
-The complete revised benchmarking code package is under `Codes/`. See `Codes/README.md` for setup, run order, metric definitions, data/checkpoint requirements, and the exact script layout used by this Dropbox-staged GitHub package.
+The complete revised benchmarking code package is under `Codes/`. See `Codes/README.md` for system requirements, tested software versions, installation instructions with typical setup time, data/checkpoint requirements, run order, metric definitions, and the exact script layout used by this GitHub package.
 
 ## Data resources
 
