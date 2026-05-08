@@ -283,7 +283,7 @@ if scg.utils.isnotebook():
     args = parser.parse_args(
         args=[
             "-d",
-            "/scratch/hdd001/home/haotian/datasets/cellxgene/3faad104-2ab8-4434-816d-474d8d2641db.scb",
+            "<DATA_ROOT>/cellxgene/example_dataset.scb",
             "-s",
             "./save/tmp",
             "--batch-size",

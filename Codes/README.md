@@ -1,6 +1,6 @@
 # NOCAP-AIVC Benchmarking Code
 
-This directory contains the Dropbox-staged GitHub code package for benchmarking NOCAP-AIVC perturbation-response models and external single-cell foundation/modeling baselines.
+This directory contains the GitHub code package for benchmarking NOCAP-AIVC perturbation-response models and external single-cell foundation/modeling baselines.
 
 The package is scripts-only. Large single-cell matrices, trained checkpoints, third-party pretrained weights, generated prediction matrices and protected cohort data are not included in `Codes/`; model checkpoint entries are maintained at the repository level under `Models/` where applicable.
 
@@ -50,7 +50,21 @@ scGPT_backbone/
 └── Pretraining.zip
 ```
 
-## Setup
+## System requirements
+
+### Operating systems tested
+
+The scripts were prepared and checked on Linux x86_64. Manuscript-scale runs were performed on a Linux GPU server; standard CPU-only Linux workstations are sufficient for code inspection, environment construction and lightweight metric utilities.
+
+### Software versions tested
+
+The bundled environment files specify the versions used during code-package preparation, including Python 3.10, R 4.4.3, Scanpy 1.11.5, AnnData 0.11.4, scikit-learn 1.5.2, PyTorch 2.6.0, Transformers 4.56.1 and the R packages listed in `environment.yml`. External model workflows additionally require their upstream packages or local checkouts, including `gears`, `scgpt`, `geneformer`, `sclambda`, scFoundation `modules`, and GeneCompass/GEARS-compatible `geares` where applicable.
+
+### Hardware requirements
+
+Full model training and prediction require GPU resources appropriate for the selected model and dataset size. The original large-scale benchmarking used NVIDIA GPU hardware. CPU-only execution is suitable for static inspection and some post-analysis utilities, but not for practical full-scale foundation-model fine-tuning or transcriptome-wide prediction.
+
+## Installation guide
 
 ```bash
 conda env create -f environment.yml
@@ -63,11 +77,11 @@ or:
 pip install -r requirements.txt
 ```
 
+Typical installation time is approximately 20-45 minutes for the conda environment on a Linux workstation with broadband internet, excluding CUDA-specific PyTorch wheel selection, external model repository setup and large checkpoint downloads. A pip-only setup is typically faster but may require manual installation of R packages and external model packages.
+
 The Python requirements are pinned to versions used during code-package preparation where available. `torch==2.6.0` is listed without a CUDA build suffix; install the CUDA-compatible wheel for your system if GPU execution is required. `torchtext` is required by the scGPT-backbone scripts, and `openpyxl` is required for Excel input/output through pandas.
 
 The R post-analysis scripts additionally require packages such as `Seurat`, `MuDataSeurat`, `scDEED`, `reticulate`, `dplyr`, `tidyr`, `ggplot2`, `readxl`, `writexl`, `foreach`, `doParallel`, `patchwork`, `RColorBrewer` and `extrafont`. Code-package-QA observed versions included R 4.4.3, Seurat 5.3.0, MuDataSeurat 0.0.0.9000, reticulate 1.43.0, dplyr 1.1.4, tidyr 1.3.1, ggplot2 4.0.0, readxl 1.4.5, writexl 1.5.4, foreach 1.5.2, doParallel 1.0.17, patchwork 1.3.2, RColorBrewer 1.1.3 and extrafont 0.20. `MuDataSeurat`, `scDEED`, `VGAM`, `resample` and `distances` may need installation from upstream R sources if unavailable from conda-forge.
-
-Model-specific workflows also require their upstream packages or local checkouts, including `gears`, `scgpt`, `geneformer`, `sclambda`, scFoundation `modules`, and GeneCompass/GEARS-compatible `geares` where applicable. These are external model requirements rather than ordinary PyPI/conda dependencies because installation depends on the corresponding upstream repositories and checkpoints.
 
 ## Data and external resource requirements
 
@@ -86,18 +100,23 @@ This code package does not include large or restricted inputs. To reproduce the 
 
 - scGPT pretrained checkpoints or scripts to pretrain from the specified corpus
 - scFoundation public checkpoint and gene index
-- Geneformer checkpoint/tokenizer resources
+- Geneformer checkpoint/tokenizer resources. The release includes the small Ensembl mapping dictionary used by the Geneformer workflow at `Telen-Geneformer/resources/ensembl_mapping_dict_gc104M.pkl`; this path can be overridden with `--ensembl_mapping_dict` or the `GENEFORMER_ENSEMBL_MAPPING_DICT` environment variable.
 - GeneCompass checkpoint and prior-knowledge resources
 - CellFM checkpoint or PyTorch-compatible port resources
 - GEARS/scLAMBDA dependencies and graph/gene-embedding resources
 
-### Path placeholders
+## Instructions for use with local data
 
-Copy the example path template and edit it for your environment:
+This repository is not a self-contained data archive. Download the permitted h5ad matrices, prediction matrices and model resources from the repositories listed in the manuscript data-availability statement, then copy and edit the path template:
 
 ```bash
+cd Codes
 cp paths.example.yaml paths.yaml
 ```
+
+Use `paths.yaml`, command-line arguments and the placeholders documented below to point each workflow to local data, checkpoints and output directories. Protected ASD cohort data used for genomic validation cannot be redistributed through this repository and should be accessed only under the relevant data-use agreements.
+
+### Path placeholders
 
 Most scripts use placeholders or local path constants from the original analysis environment. Replace these with local resource paths before execution. Common placeholders include:
 

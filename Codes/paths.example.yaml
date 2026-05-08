@@ -22,5 +22,6 @@ external_models:
   scgpt_checkpoint: /path/to/scgpt/checkpoint
   scfoundation_checkpoint: /path/to/scfoundation/checkpoint
   geneformer_checkpoint: /path/to/geneformer/checkpoint
+  geneformer_ensembl_mapping_dict: Telen-Geneformer/resources/ensembl_mapping_dict_gc104M.pkl
   genecompass_checkpoint: /path/to/genecompass/checkpoint
   cellfm_checkpoint: /path/to/cellfm/checkpoint

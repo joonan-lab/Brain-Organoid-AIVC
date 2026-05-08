@@ -1,8 +1,8 @@
 {
   "root": "Codes",
-  "total_file_count": 42,
-  "checksummed_file_count": 41,
-  "manifest_note": "CODE_FILE_MANIFEST.json checksum is omitted to avoid self-referential hashing. All other Dropbox-staged Codes files are listed with SHA-256 checksums.",
+  "total_file_count": 43,
+  "checksummed_file_count": 42,
+  "manifest_note": "CODE_FILE_MANIFEST.json checksum is omitted to avoid self-referential hashing. All other GitHub-staged Codes files are listed with SHA-256 checksums.",
   "files": [
     {
       "path": "BaselineMean/01_evaluation_TrainMean.py",
@@ -56,13 +56,13 @@
     },
     {
       "path": "CODE_FILE_MANIFEST.txt",
-      "sha256": "4a03b4c5af9c35b042afdb44ea317afb30ca1b6c050c3971878873d64fe32f61",
-      "size_bytes": 2317
+      "sha256": "e4ed56e9b4bd56d05fb21fa78f428cef6d1b238c2117a564c7286e8e479779c3",
+      "size_bytes": 2359
     },
     {
       "path": "README.md",
-      "sha256": "83c8b9c9b70443502a188a2bd23fd57e612a6d908f029193ed1b812b3f449e4b",
-      "size_bytes": 11994
+      "sha256": "559b7107e71945d239d4910151a8178a54b144f196339486c5017b6acedc8f1e",
+      "size_bytes": 13993
     },
     {
       "path": "Telen-CellFM/01_train_CellFM.py",
@@ -121,18 +121,23 @@
     },
     {
       "path": "Telen-Geneformer/01_train_Geneformer.py",
-      "sha256": "f0a84cdfaa0803a588ab849b69603a12949232f7771a547145a9c0624c90e300",
-      "size_bytes": 45248
+      "sha256": "f93f3f8e56e7ef09708d0a8cfc9932dc333157e81a6451599592668d1fdc14ae",
+      "size_bytes": 45940
     },
     {
       "path": "Telen-Geneformer/02_evaluation_Geneformer.py",
-      "sha256": "ecc4c119962bb945303a03b9f8d4be64768df72dd3e4c5bad6c57445677b8c5a",
-      "size_bytes": 30452
+      "sha256": "87b80dfae3442b160a32d846b7e10735ae7b20fe3a31493def252724414e3ba9",
+      "size_bytes": 31144
     },
     {
       "path": "Telen-Geneformer/03_prediction_Geneformer.py",
-      "sha256": "c62a3ba8989f97633a3f439773020d1e7ff31cb4d5df5e56f35ecbbb1e2b556b",
-      "size_bytes": 16480
+      "sha256": "ec2ece6606e0e65fe484d0994e84f167dbb9361894ef2569611b09f957fc9164",
+      "size_bytes": 17172
+    },
+    {
+      "path": "Telen-Geneformer/resources/ensembl_mapping_dict_gc104M.pkl",
+      "sha256": "0819bcbd869cfa14279449b037eb9ed1d09a91310e77bd1a19d927465030e95c",
+      "size_bytes": 3957652
     },
     {
       "path": "Telen-scFoundation/01_train_scFoundation.py",
@@ -171,8 +176,8 @@
     },
     {
       "path": "paths.example.yaml",
-      "sha256": "9959819dd3d760646de0d4e18ea43316b6a5fdb5a8f564e838e8e6d59d3907f8",
-      "size_bytes": 929
+      "sha256": "7960f2a7fdf88c39d6e749e6b60b9d8ac7b3885334190d4121fdb7d93eda4cb7",
+      "size_bytes": 1023
     },
     {
       "path": "requirements.txt",
@@ -206,8 +211,8 @@
     },
     {
       "path": "scGPT_backbone/Pretraining/pretrain.py",
-      "sha256": "65623b5564f4754120c80ba587df1d80e418869771a0b29de6c952d066ddae90",
-      "size_bytes": 34973
+      "sha256": "c55932cff2d9b60d9073f52885a0adb55403a390d5b44762c093b6962e3c3744",
+      "size_bytes": 34926
     }
   ]
 }

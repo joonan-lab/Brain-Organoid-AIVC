@@ -1,7 +1,7 @@
 NOCAP-AIVC benchmarking code file manifest
 
 Root: Codes
-Scope: Dropbox-staged scripts-only GitHub code package for benchmarking workflows.
+Scope: GitHub-staged code package for benchmarking workflows.
 
 Folder naming note: model-specific workflow folders use reviewer-facing Telen-* names except BaselineMean, Benchmarking_Metrics, and the shared scGPT_backbone workflow.
 
@@ -48,6 +48,7 @@ Telen-Geneformer/
   - Telen-Geneformer/01_train_Geneformer.py
   - Telen-Geneformer/02_evaluation_Geneformer.py
   - Telen-Geneformer/03_prediction_Geneformer.py
+  - Telen-Geneformer/resources/ensembl_mapping_dict_gc104M.pkl
 
 Telen-scFoundation/
   - Telen-scFoundation/01_train_scFoundation.py

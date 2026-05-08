@@ -55,6 +55,18 @@ from geneformer.emb_extractor import get_embs
 
 warnings.filterwarnings("ignore")
 
+DEFAULT_ENSEMBL_MAPPING_DICT = Path(__file__).resolve().parent / "resources" / "ensembl_mapping_dict_gc104M.pkl"
+
+def resolve_ensembl_mapping_dict(args):
+    mapping_path = getattr(args, "ensembl_mapping_dict", None) or os.environ.get("GENEFORMER_ENSEMBL_MAPPING_DICT") or DEFAULT_ENSEMBL_MAPPING_DICT
+    mapping_path = Path(mapping_path)
+    if not mapping_path.exists():
+        raise FileNotFoundError(
+            f"Geneformer Ensembl mapping dictionary not found: {mapping_path}. "
+            "Provide --ensembl_mapping_dict or set GENEFORMER_ENSEMBL_MAPPING_DICT."
+        )
+    return mapping_path
+
 
 # =======================
 # Logger
@@ -757,7 +769,9 @@ def main(args):
         adata.obs["n_counts"] = pd.to_numeric(adata.obs["n_counts"], errors="coerce")
     
     # Gene Mapping
-    with open("/data1/Geneformer/geneformer/ensembl_mapping_dict_gc104M.pkl", "rb") as f:
+    mapping_path = resolve_ensembl_mapping_dict(args)
+    logger.info(f"Using Geneformer Ensembl mapping dictionary: {mapping_path}")
+    with open(mapping_path, "rb") as f:
         gene2ensembl = pickle.load(f)
         
     # 2. Tokenize Control Data
